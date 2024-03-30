@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { StatusBar, Text, View } from "react-native";
 import {
   useFonts,
   Roboto_400Regular,
@@ -12,12 +12,20 @@ export default function App() {
   });
 
   return (
-    <View>
-      {fontLoaded ? (
-        <Text>Open up App.js to start working on your app!</Text>
-      ) : (
-        <View></View>
-      )}
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#202024",
+      }}
+    >
+      <StatusBar
+        barStyle={"light-content"}
+        backgroundColor={"transparent"}
+        translucent
+      />
+      {fontLoaded ? <Text>Hello World</Text> : <View></View>}
     </View>
   );
 }

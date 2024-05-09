@@ -8,6 +8,7 @@ import { NativeBaseProvider } from "native-base";
 import { Loading } from "@components/Loading";
 
 import { THEME } from "./src/theme";
+import { SignUp } from "@screens/SignUp";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -22,7 +23,7 @@ export default function App() {
         backgroundColor={"transparent"}
         translucent
       />
-      {fontLoaded ? <View /> : <Loading />}
+      {fontLoaded ? <SignUp /> : <Loading />}
     </NativeBaseProvider>
   );
 }

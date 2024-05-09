@@ -1,4 +1,4 @@
-import { StatusBar, Text, View } from "react-native";
+import { StatusBar } from "react-native";
 import {
   useFonts,
   Roboto_400Regular,
@@ -8,7 +8,7 @@ import { NativeBaseProvider } from "native-base";
 import { Loading } from "@components/Loading";
 
 import { THEME } from "./src/theme";
-import { SignUp } from "@screens/SignUp";
+import { Routes } from "@routes/index";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -23,7 +23,7 @@ export default function App() {
         backgroundColor={"transparent"}
         translucent
       />
-      {fontLoaded ? <SignUp /> : <Loading />}
+      {fontLoaded ? <Routes /> : <Loading />}
     </NativeBaseProvider>
   );
 }
